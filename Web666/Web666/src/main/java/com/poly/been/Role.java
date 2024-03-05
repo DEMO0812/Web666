@@ -33,4 +33,40 @@ public class Role implements Serializable{
     @OneToMany(mappedBy = "role", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Authority> authorities;
+
+	public String getRoleId() {
+		return roleId;
+	}
+
+	public void setRoleId(String roleId) {
+		this.roleId = roleId;
+	}
+
+	public String getRoleName() {
+		return roleName;
+	}
+
+	public void setRoleName(String roleName) {
+		this.roleName = roleName;
+	}
+
+	public List<Authority> getAuthorities() {
+		return authorities;
+	}
+
+	public void setAuthorities(List<Authority> authorities) {
+		this.authorities = authorities;
+	}
+
+	public Role(String roleId, String roleName, List<Authority> authorities) {
+		super();
+		this.roleId = roleId;
+		this.roleName = roleName;
+		this.authorities = authorities;
+	}
+
+	public Role() {
+		super();
+	}
+    
 }
