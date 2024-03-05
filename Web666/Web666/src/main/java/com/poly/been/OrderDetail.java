@@ -46,4 +46,59 @@ public class OrderDetail implements Serializable {
 
 	@Column(name = "price")
 	private double price;
+
+	public Integer getOrdetailId() {
+		return ordetailId;
+	}
+
+	public void setOrdetailId(Integer ordetailId) {
+		this.ordetailId = ordetailId;
+	}
+
+	public Order getOrder() {
+		return order;
+	}
+
+	public void setOrder(Order order) {
+		this.order = order;
+	}
+
+	public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public OrderDetail(Integer ordetailId, Order order, Product product, int quantity, double price) {
+		super();
+		this.ordetailId = ordetailId;
+		this.order = order;
+		this.product = product;
+		this.quantity = quantity;
+		this.price = price;
+	}
+
+	public OrderDetail() {
+		super();
+	}
+	
+	
 }
