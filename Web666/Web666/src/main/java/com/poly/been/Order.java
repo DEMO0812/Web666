@@ -55,4 +55,77 @@ public class Order implements Serializable{
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<OrderDetail> orderDetails;
+
+	public Integer getOrdId() {
+		return ordId;
+	}
+
+	public void setOrdId(Integer ordId) {
+		this.ordId = ordId;
+	}
+
+	public Account getAccount() {
+		return account;
+	}
+
+	public void setAccount(Account account) {
+		this.account = account;
+	}
+
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+
+	public String getOrder_address() {
+		return order_address;
+	}
+
+	public void setOrder_address(String order_address) {
+		this.order_address = order_address;
+	}
+
+	public String getOrdPhone() {
+		return ordPhone;
+	}
+
+	public void setOrdPhone(String ordPhone) {
+		this.ordPhone = ordPhone;
+	}
+
+	public Voucher getVoucher() {
+		return voucher;
+	}
+
+	public void setVoucher(Voucher voucher) {
+		this.voucher = voucher;
+	}
+
+	public List<OrderDetail> getOrderDetails() {
+		return orderDetails;
+	}
+
+	public void setOrderDetails(List<OrderDetail> orderDetails) {
+		this.orderDetails = orderDetails;
+	}
+
+	public Order(Integer ordId, Account account, Date createDate, String order_address, String ordPhone,
+			Voucher voucher, List<OrderDetail> orderDetails) {
+		super();
+		this.ordId = ordId;
+		this.account = account;
+		this.createDate = createDate;
+		this.order_address = order_address;
+		this.ordPhone = ordPhone;
+		this.voucher = voucher;
+		this.orderDetails = orderDetails;
+	}
+
+	public Order() {
+		super();
+	}
+    
 }

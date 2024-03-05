@@ -37,17 +37,13 @@ public class AccountServiceImpl implements AccountService{
 		aDao.deleteById(username);
 		
 	}
-
+	// lấy ra tk admin
 	@Override
 	public List<Account> getAdministrators() {
-		// TODO Auto-generated method stub
-		return null;
+		return aDao.getAdministrators();
 	}
 
-	// lấy ra tk admin
-//	@Override
-//	public List<Account> getAdministrators() {
-//		return aDao.getAdministrators();
-//	}
+	
+
 
 }

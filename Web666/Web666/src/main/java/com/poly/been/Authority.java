@@ -34,7 +34,7 @@ public class Authority implements Serializable{
 
     @ManyToOne
     @JoinColumn(name = "Username")
-    @JsonIgnoreProperties({"authorities", "favoriteProducts"})
+   
     private Account account;
 
     @ManyToOne
@@ -42,4 +42,40 @@ public class Authority implements Serializable{
     @JsonIgnore
     private Role role;
 
+	public Integer getAuthId() {
+		return authId;
+	}
+
+	public void setAuthId(Integer authId) {
+		this.authId = authId;
+	}
+
+	public Account getAccount() {
+		return account;
+	}
+
+	public void setAccount(Account account) {
+		this.account = account;
+	}
+
+	public Role getRole() {
+		return role;
+	}
+
+	public void setRole(Role role) {
+		this.role = role;
+	}
+
+	public Authority(Integer authId, Account account, Role role) {
+		super();
+		this.authId = authId;
+		this.account = account;
+		this.role = role;
+	}
+
+	public Authority() {
+		super();
+	}
+
+    
 }
